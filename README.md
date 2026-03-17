@@ -1,9 +1,9 @@
 # Portfolio Website
 
 Static portfolio for **Abhipsa Roy Choudhury** with:
-- AI-focused profile summary
+- Profile summary
 - Project and experience sections
-- Embedded and downloadable Resume + Cover Letter PDFs
+- Downloadable Resume and certification PDFs
 
 ## Local preview
 
