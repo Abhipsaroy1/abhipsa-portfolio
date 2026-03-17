@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -33,6 +33,7 @@
       </p>
       <div class="hero-actions">
         <a class="btn btn-secondary" href="https://www.linkedin.com/in/abhipsa-roy-choudhury-9b221a190/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn btn-secondary" href="#projects">Explore Projects</a>
       </div>
       <ul class="quick-facts">
         <li><strong>Location:</strong> Paderborn, Germany</li>
@@ -44,10 +45,28 @@
     <section class="section reveal">
       <h2>About Me</h2>
       <p>
-        I am pursuing my Master’s in Computer Engineering at Paderborn University, where I work on data-driven systems
+        I am pursuing my Master's in Computer Engineering at Paderborn University, where I work on data-driven systems
         engineering use cases and coordinate tasks as a student project manager. I enjoy applying AI and software engineering
         to practical problems while maintaining quality, ownership, and close collaboration in agile teams.
       </p>
+    </section>
+
+    <section class="section reveal">
+      <h2>Recruiter Snapshot</h2>
+      <div class="snapshot-grid">
+        <article class="card snapshot-card">
+          <p class="snapshot-label">Projects Built</p>
+          <p class="snapshot-value"><span class="count-up" data-target="3">0</span>+</p>
+        </article>
+        <article class="card snapshot-card">
+          <p class="snapshot-label">Certifications</p>
+          <p class="snapshot-value"><span class="count-up" data-target="3">0</span></p>
+        </article>
+        <article class="card snapshot-card">
+          <p class="snapshot-label">Industry Experience</p>
+          <p class="snapshot-value"><span class="count-up" data-target="2">0</span>+ years</p>
+        </article>
+      </div>
     </section>
 
     <section class="section reveal">
@@ -70,8 +89,14 @@
 
     <section id="projects" class="section reveal">
       <h2>Projects</h2>
-      <div class="grid two">
-        <article class="card project">
+      <div class="project-filters" role="group" aria-label="Project categories">
+        <button class="chip is-active" type="button" data-filter="all">All</button>
+        <button class="chip" type="button" data-filter="ai">AI</button>
+        <button class="chip" type="button" data-filter="data">Data</button>
+        <button class="chip" type="button" data-filter="iot">IoT</button>
+      </div>
+      <div class="grid two project-grid">
+        <article class="card project" data-tags="ai data">
           <div class="tag">04/2025 - Present</div>
           <h3>Agent SE | Fraunhofer IEM</h3>
           <p>
@@ -85,13 +110,13 @@
           </ul>
         </article>
 
-        <article class="card project">
+        <article class="card project" data-tags="ai data">
           <div class="tag">11/2024 - 01/2025</div>
           <h3>Engineering Assistant for CAD Models</h3>
           <p>Data-driven engineering course project focused on prompt engineering for translating user requirements into structured geometry.</p>
         </article>
 
-        <article class="card project">
+        <article class="card project" data-tags="iot data">
           <div class="tag">05/2021 - 06/2021</div>
           <h3>Weather Monitoring Dashboard (Node-RED)</h3>
           <p>IoT solution to collect and process temperature, humidity, and air pressure data with dashboard visualizations and CSV exports.</p>
@@ -128,7 +153,7 @@
           <p>Python, SQL, Java</p>
         </div>
         <div class="skill-block">
-          <h3>Libraries & Tools</h3>
+          <h3>Libraries &amp; Tools</h3>
           <p>OpenAI API, NumPy, Pandas, Git, JIRA, Node-RED</p>
         </div>
         <div class="skill-block">
@@ -139,7 +164,7 @@
     </section>
 
     <section class="section reveal">
-      <h2>Education & Certifications</h2>
+      <h2>Education &amp; Certifications</h2>
       <div class="grid two">
         <article class="card">
           <h3>M.Sc. Computer Engineering</h3>
@@ -152,11 +177,11 @@
           <p class="meta">08/2018 - 06/2022 | CGPA: 8.38</p>
         </article>
       </div>
-      <p class="certs">Certifications: Agile & Beyond (SICP, 06/2025), Goethe A1 (08/2024), Agile Methodology (09/2023)</p>
+      <p class="certs">Certifications: Agile &amp; Beyond (SICP, 06/2025), Goethe A1 (08/2024), Agile Methodology (09/2023)</p>
     </section>
 
     <section id="documents" class="section reveal">
-      <h2>Resume & Certifications</h2>
+      <h2>Resume &amp; Certifications</h2>
       <div class="grid three">
         <article class="card doc-card">
           <h3>Resume (CV)</h3>
@@ -182,10 +207,11 @@
     </section>
 
     <section id="contact" class="section contact reveal">
-      <h2>Let’s Connect</h2>
-      <p>If you’re hiring for student assistant engineering roles, I’d be glad to discuss how I can contribute.</p>
+      <h2>Let's Connect</h2>
+      <p>If you're hiring for student assistant engineering roles, I'd be glad to discuss how I can contribute.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="mailto:abhipsaroy1104@gmail.com">abhipsaroy1104@gmail.com</a>
+        <button class="btn btn-secondary" id="copy-email-btn" type="button" data-copy="abhipsaroy1104@gmail.com">Copy Email</button>
         <a class="btn btn-secondary" href="tel:+4915560840653">+49 155 6084 0653</a>
         <a class="btn btn-secondary" href="https://www.linkedin.com/in/abhipsa-roy-choudhury-9b221a190/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
       </div>
@@ -193,8 +219,11 @@
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Abhipsa Roy Choudhury</p>
+    <p>&copy; <span id="year"></span> Abhipsa Roy Choudhury</p>
   </footer>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Back to top">Top</button>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <script src="script.js"></script>
 </body>
