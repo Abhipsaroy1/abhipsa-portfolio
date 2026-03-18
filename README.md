@@ -15,12 +15,3 @@ python -m http.server 8080
 ```
 
 Then open `http://localhost:8080`.
-
-## Make it accessible to recruiters
-
-Deploy this folder to any static hosting platform:
-- GitHub Pages
-- Netlify
-- Vercel
-
-After deployment, share your public URL in applications and LinkedIn.
